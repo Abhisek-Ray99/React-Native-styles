@@ -1,3 +1,5 @@
+// Only in App.js
+
 import React from 'react';
 import {View,Text, StyleSheet} from 'react-native';
 
@@ -51,3 +53,79 @@ const styles = StyleSheet.create({
 })
 
 export default App;
+
+
+
+//or//
+
+
+
+// App.js and Box.js(component)
+
+// ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>App.js>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+import Box from './components/Box';
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={[styles.box, styles.title]}>Hello world</Text>
+      <Box text="First" colorCode="#007D87" />
+      <Box text="Second" colorCode="#0074DC" />
+      <Box text="Third" colorCode="#E97393" />
+      <Box text="Fourth" colorCode="#FF4900" />
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center'
+  },
+  container: {
+    flexDirection: 'column',
+    paddingTop: 50,
+    paddingHorizontal: 10,
+  },
+})
+
+export default App;
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Box.js >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+
+const ColorBox = ({text, colorCode}) => {
+    const boxColor = {
+        backgroundColor: colorCode
+    }
+    return (
+        <View style={[styles.box, boxColor]}>
+            <Text style={styles.text}>{text}: {colorCode}</Text>
+        </View>
+    )
+}
+
+const styles = StyleSheet.create({
+    box: {
+        padding: 10,
+        borderRadius: 3,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 10
+    },
+    text: {
+        fontWeight: 'bold'
+    }
+})
+
+export default ColorBox;
+
+
