@@ -31,35 +31,15 @@ const styles = StyleSheet.create({
   },
   view1: {
     backgroundColor: '#007D87',
-    padding: 10,
-    borderRadius: 3,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 10
   },
   view2: {
     backgroundColor: '#0074DC',
-    padding: 10,
-    borderRadius: 3,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 10
   },
   view3: {
     backgroundColor: '#E97393',
-    padding: 10,
-    borderRadius: 3,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 10
   },
   view4: {
     backgroundColor: '#FF4900',
-    padding: 10,
-    borderRadius: 3,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 10
   },
   box: {
     padding: 10,
